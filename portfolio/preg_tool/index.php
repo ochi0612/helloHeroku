@@ -23,7 +23,7 @@ $patterns = array(
 );
 
 echo "変更前\n";
-var_dump($content);
+var_dump(htmlentities($content, ENT_QUOTES, 'UTF-8'));
 
 $preg_match_contents = array();
 $new_preg_match_contents = array();
@@ -41,4 +41,4 @@ foreach ( $patterns as $key => $value ) {
 }
 
 echo "\n変更後\n";
-var_dump($content);
+var_dump(htmlentities($content, ENT_QUOTES, 'UTF-8'));
