@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="float: left;">
+        <h2>変更前</h2>
+        <p>TEXT</p>
+        <textarea name="" id="content" cols="30" rows="10" style="max-width: 500px;max-height: 700px;margin-right:100px;" value="sss"></textarea>
+        <p>変換したいタグ</p>
+        <input id="before" type="text" style="display: block;">
+        <p>変換後のタグ</p>
+        <input id="after" type="text" style="display: block;">
+    </div>
+    <div style="float: left;">
+        <h2>変更後</h2>
+        <p>結果</p>
+        <textarea name="" id="result" cols="30" rows="10" style="max-width: 500px;max-height: 700px;"></textarea>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    var content = document.getElementById('content');
+    var before = document.getElementById('before');
+    var after = document.getElementById('after');
+    var result = document.getElementById('result');
+
+    function match_text( content, pregTag, changeText ) {
+        pregTag = pregTag.replace(/\W$/, ''); // 余分な文言削除
+        var result = pregTag.split(',').join('|'); // 正規表現用に加工
+        var regexp = new RegExp('(<|<\/)\\\s?(' + result + ')', 'g'); // 正規表現に作成
+        var pregMatchArray = content.match( regexp ); // タグの抜き出し
+
+        if ( pregMatchArray ) {
+            pregMatchArray.forEach( function ( element ) {
+                var tagName = '';
+                if ( element !== '' ) {
+                    tagName = element.match(/[a-z0-9]+/); // タグの文字を取得
+                }
+                var elementAfter = element.replace( tagName, changeText ); // タグの文字を変換
+                content = content.replace( element, elementAfter ); // コンテンツのタグ文字を変換
+            });
+        }
+
+        return content;
+    }
+
+    var allTarget = [ content, before, after ];
+    allTarget.forEach( function( target ){
+        target.addEventListener('keyup', function () {
+            var contentValue = content.value;
+            var beforeValue = before.value;
+            var afterValue = after.value;
+
+            var result_text = match_text( contentValue, beforeValue, afterValue );
+            result.value = result_text;
+        });
+    });
+
+    // var content = '<div>&euro;aaa</div>'
+    // var box = document.createElement('div');
+    // box.innerHTML = content;
+    // content = box.innerHTML;
+
+    // console.log(content);
+    // '<div>€aaa</div>'
+</script>
+</html>
