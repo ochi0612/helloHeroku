@@ -33,6 +33,7 @@
         </ul>
     </div>
 </header>
+<div class="bg_img"></div>
 <footer>
     <div class="footer">
         <a  class="footer_logo" href="<?php ?>">
