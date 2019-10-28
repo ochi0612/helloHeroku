@@ -34,6 +34,31 @@
     </div>
 </header>
 <div class="bg_img"></div>
+<main>
+    <h1 class="myname">Ochi Kazuya</h1>
+    <!-- 自己紹介 -->
+    <div class="introduction">
+        <div class="introduction_box">
+            <h2>あいさつ</h2>
+        </div>
+        <img src="https://ochi.herokuapp.com/imgs/introduction.jpg" alt="">
+    </div>
+    <!-- 記事一覧 -->
+    <div class="main_list">
+        <h2>成果物一覧</h2>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+</main>
+
 <footer>
     <div class="footer">
         <a  class="footer_logo" href="<?php ?>">
