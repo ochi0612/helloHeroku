@@ -3,42 +3,42 @@
 $content = '
     <li class="facilities-icon-off">
         <span class="facilities-item baby-bed"></span>
-        <span class="facilities-info-text">ƒxƒr[ƒxƒbƒh</span>
+        <span class="facilities-info-text">ãƒ™ãƒ“ãƒ¼ãƒ™ãƒƒãƒ‰</span>
     </li>
 ';
 
 $patterns = array(
-    'li' => [ //–¼‘O
-        'select' => '/<(li|\/li)/s', //‘I‘ğ
-        'change_after' => 'div'  //’uŠ·Œã
+    'li' => [ //åå‰
+        'select' => '/<(li|\/li)/s', //é¸æŠ
+        'change_after' => 'div'  //ç½®æ›å¾Œ
     ],
-    'facilities' => [ //–¼‘O
-        'select' => '/facil(i(ti))es/s', //‘I‘ğ
-        'change_after' => 'aaa'  //’uŠ·Œã
+    'facilities' => [ //åå‰
+        'select' => '/facil(i(ti))es/s', //é¸æŠ
+        'change_after' => 'aaa'  //ç½®æ›å¾Œ
     ],
-    'class' => [ //–¼‘O
-        'select' => '/class/s', //‘I‘ğ
-        'change_after' => 'id'  //’uŠ·Œã
+    'class' => [ //åå‰
+        'select' => '/class/s', //é¸æŠ
+        'change_after' => 'id'  //ç½®æ›å¾Œ
     ]
 );
 
-echo "•ÏX‘O\n";
+echo "å¤‰æ›´å‰\n";
 echo $content;
 
 $preg_match_contents = array();
 $new_preg_match_contents = array();
 foreach ( $patterns as $key => $value ) {
-    // ƒRƒ“ƒeƒ“ƒc‚©‚ç•ÏŠ·‚·‚é•”•ª‚Ì”²‚«o‚µ
+    // ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‹ã‚‰å¤‰æ›ã™ã‚‹éƒ¨åˆ†ã®æŠœãå‡ºã—
     if ( preg_match_all( $value[ 'select' ], $content, $preg_match_contents ) ) {
         $last_index = array_keys( $preg_match_contents, end( $preg_match_contents ) );
-        // •ÏŠ·‚·‚éêŠ‚Ìw’è
+        // å¤‰æ›ã™ã‚‹å ´æ‰€ã®æŒ‡å®š
         $change_before = '/' . $preg_match_contents[ $last_index[ 0 ] ][ 0 ] . '/s';
-        // •ÏXŒã‚ÌƒRƒ“ƒeƒ“ƒc‚ğì¬
+        // å¤‰æ›´å¾Œã®ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ä½œæˆ
         $new_preg_match_contents = preg_replace( $change_before, $value[ 'change_after' ], $preg_match_contents[ 0 ] );
-        // •ÏŠ·‘O‚Æ•ÏŠ·Œã‚ğ“ü‚ê‘Ö‚¦
+        // å¤‰æ›å‰ã¨å¤‰æ›å¾Œã‚’å…¥ã‚Œæ›¿ãˆ
         $content = str_replace( $preg_match_contents[ 0 ], $new_preg_match_contents, $content );
     }
 }
 
-echo "\n•ÏXŒã\n";
+echo "\nå¤‰æ›´å¾Œ\n";
 echo $content;
