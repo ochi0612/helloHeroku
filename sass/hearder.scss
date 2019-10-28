@@ -1,0 +1,50 @@
+header {
+
+    .header {
+        padding: 0 40px;
+        position: fixed;
+        background-color: black;
+        opacity: .7;
+        width: 100%;
+        height: 50px;
+        z-index: 100;
+
+        &_logo {
+            width: auto;
+
+            & > img {
+                height: 50px;
+            }
+        }
+
+        &_nav {
+            display: inline-block;
+            font-size: 0;
+            width: 500px;
+
+            & > li {
+                display: inline-block;
+                height: 50px;
+                width: 100px;
+                line-height: 50px;
+                text-align: center;
+
+                & > a {
+                    display: inline;
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-style:oblique;
+                    font-family:Times New Roman,"ＭＳ Ｐゴシック";
+
+                }
+            }
+        }
+    }
+}
+
+.bg_img{
+    background-image: url(http://localhost:8000/wp-content/themes/gizumo_test/imgs/top.jpg);
+    background-size: cover;
+    height: 100%;
+
+}
