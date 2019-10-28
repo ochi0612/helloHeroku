@@ -22,6 +22,8 @@ $patterns = array(
     ]
 );
 
+var_dump($patterns);
+
 echo "変更前\n";
 var_dump(htmlentities($content, ENT_QUOTES, 'UTF-8'));
 
