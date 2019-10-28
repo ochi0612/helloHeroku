@@ -149,7 +149,7 @@ header .header {
         font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
 
 .bg_img {
-  background-image: url(../imgs/top.jpg);
+  background-image: url(./lib/imgs/top.jpg);
   background-size: cover;
   height: 100%; }
 
