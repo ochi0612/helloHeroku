@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/*
+Theme Name: gizumo_test
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  position: relative;
+  min-height: 100%;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.3;
+  word-break: break-all;
+  font-family: YuGothic, '游ゴシック', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%; }
+
+a:hover {
+  color: aqua; }
+
+img {
+  vertical-align: middle; }
+
+span, i {
+  display: inline-block; }
+
+input, textarea, button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  -webkit-appearance: none; }
+
+input:-webkit-autofill, textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+b, .b {
+  font-weight: bold; }
+
+.u-full {
+  width: 100%;
+  height: auto; }
+
+.u-mb40 {
+  margin-bottom: 40px; }
+
+html, body {
+  height: 100%; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 30px; }
+
+iframe {
+  width: 100%;
+  height: 600px; }
+
+header .header {
+  padding: 0 40px;
+  position: fixed;
+  background-color: black;
+  opacity: .7;
+  width: 100%;
+  height: 50px;
+  z-index: 100; }
+  header .header_logo {
+    width: auto; }
+    header .header_logo > img {
+      height: 50px; }
+  header .header_nav {
+    display: inline-block;
+    font-size: 0;
+    width: 500px; }
+    header .header_nav > li {
+      display: inline-block;
+      height: 50px;
+      width: 100px;
+      line-height: 50px;
+      text-align: center; }
+      header .header_nav > li > a {
+        display: inline;
+        font-size: 15px;
+        color: #ffffff;
+        font-style: oblique;
+        font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
+
+.bg_img {
+  background-image: url(http://localhost:8000/wp-content/themes/gizumo_test/imgs/top.jpg);
+  background-size: cover;
+  height: 100%; }
+
+main {
+  text-align: center;
+  padding: 30px 0; }
+  main .myname {
+    font-family: -webkit-pictograph; }
+  main .introduction {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkgray;
+    padding: 40px; }
+    main .introduction_box {
+      margin: auto; }
+      main .introduction_box > h2 {
+        margin-bottom: 20px; }
+    main .introduction > img {
+      width: 40%; }
+  main .main_list {
+    margin-top: 20px; }
+    main .main_list > ul {
+      margin: 20px; }
+      main .main_list > ul > li > a {
+        display: inline; }
+
+.content {
+  padding-top: 140px; }
+  .content > h1 {
+    margin-bottom: 40px;
+    text-align: center; }
+  .content_text {
+    margin: 40px auto;
+    padding: 30px;
+    width: 55%;
+    background: gainsboro; }
+    .content_text > h2 {
+      margin: 30px 0 10px; }
+  .content_box {
+    width: 90%;
+    margin: 0 auto 30px;
+    padding: 20px;
+    border: 2px solid black; }
+
+footer .footer {
+  padding: 0 40px;
+  background-color: black;
+  width: 100%;
+  z-index: 90; }
+  footer .footer_logo {
+    width: auto; }
+    footer .footer_logo > img {
+      height: 50px; }
+  footer .footer_nav {
+    display: inline-block;
+    font-size: 0;
+    width: 500px; }
+    footer .footer_nav > li {
+      display: inline-block;
+      width: 100px;
+      line-height: 50px;
+      text-align: center; }
+      footer .footer_nav > li > a {
+        display: inline;
+        font-size: 15px;
+        color: #ffffff;
+        font-style: oblique;
+        font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
+  footer .footer_copywriter {
+    color: #ffffff;
+    text-align: right; }
