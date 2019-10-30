@@ -1,4 +1,4 @@
 RewriteEngine on
 
-RewriteRule ^(.*)portfolio\/(.*) $1$2index.html
+RewriteRule ^(.*)/portfolio(.*)(/index.(html|php)) $1$2$3
 
