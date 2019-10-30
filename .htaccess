@@ -1,7 +1,7 @@
 
 RewriteEngine on
 RewriteCond %{THE_REQUEST} ^.*/portfolio/.*index.html
-RewriteRule ^(.*) $1 [L]
+RewriteRule ^(.*) https://ochi.herokuapp.com/$1https://ochi.herokuapp.com/$1 [L]
 
 RewriteCond %{THE_REQUEST} ^.*/index.html
 RewriteRule ^(.*)index.html$ https://ochi.herokuapp.com/$1 [R=301,L]
