@@ -119,6 +119,11 @@ iframe {
   width: 100%;
   height: 600px; }
 
+header::after {
+  background-image: url(./lib/imgs/top.jpg);
+  background-size: cover;
+  height: 100%; }
+
 header .header {
   padding: 0 40px;
   position: fixed;
@@ -147,11 +152,6 @@ header .header {
         color: #ffffff;
         font-style: oblique;
         font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
-
-.bg_img {
-  background-image: url(./lib/imgs/top.jpg);
-  background-size: cover;
-  height: 100%; }
 
 main {
   text-align: center;
