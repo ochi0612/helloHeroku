@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteRule (.*) /portfolio/$1
+RewriteRule (.*) /portfolio/$1 [R=301,L]
 
 RewriteEngine on
 RewriteCond %{THE_REQUEST} ^.*/index.html
