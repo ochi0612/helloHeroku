@@ -1,7 +1,6 @@
 
 RewriteEngine on
-RewriteCond %{THE_REQUEST} ^.*/portfolio/
-RewriteRule ^portfolio/$ https://ochi.herokuapp.com/ [R=301,L]
 
 RewriteCond %{THE_REQUEST} ^.*/index.(html$|php$)
-RewriteRule ^(.*)index.(html$|php$) https://ochi.herokuapp.com/$1 [R=301,L]
+RewriteRule ^(.*)index.html$ https://ochi.herokuapp.com/$1 [R=301,L]
+RewriteRule ^(.*)index.php$ https://ochi.herokuapp.com/$1 [R=301,L]
