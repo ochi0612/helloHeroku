@@ -87,9 +87,6 @@ input, textarea, button {
   color: inherit;
   -webkit-appearance: none; }
 
-input:-webkit-autofill, textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px white inset; }
-
 .clearfix:before,
 .clearfix:after {
   display: block;
@@ -115,9 +112,19 @@ h1 {
 h2 {
   font-size: 30px; }
 
-iframe {
+.content_max_width {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.top-wrapper::before {
+  content: '';
+  display: block;
+  position: fixed;
+  background-image: url("./lib/imgs/top.jpg");
+  background-size: cover;
+  height: 100vh;
   width: 100%;
-  height: 600px; }
+  z-index: -100; }
 
 /* header */
 header {
@@ -152,7 +159,7 @@ main {
   position: relative;
   text-align: center;
   padding: calc(100vh - 90px) 20px 50px; }
-  main main::after {
+  main::after {
     content: '';
     display: block;
     position: absolute;
@@ -203,6 +210,7 @@ main {
           background-image: url("./lib/imgs/introduction.jpg");
           background-size: cover; }
           main section .main_list > ul li > a {
+            border-radius: 50px;
             position: absolute;
             top: 0;
             right: 0;
