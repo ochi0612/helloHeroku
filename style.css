@@ -2,6 +2,10 @@
 /*
 Theme Name: gizumo_test
 */
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,7 +32,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  -webkit-text-size-adjust: 100%; }
 
 ol, ul {
   list-style: none; }
@@ -46,9 +51,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-* {
-  box-sizing: border-box; }
 
 html {
   min-height: 100%;
@@ -120,7 +122,7 @@ h2 {
   content: '';
   display: block;
   position: fixed;
-  background-image: url(https://ochi.herokuapp.com/lib/imgs/top.jpg);
+  background-image: url(./lib/imgs/top.jpg);
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -209,7 +211,7 @@ main {
           width: 250px;
           height: 100px;
           background-color: rgba(2, 0, 100, 0.7);
-          background-image: url(https://ochi.herokuapp.com/lib/imgs/introduction.jpg);
+          background-image: url(./lib/imgs/introduction.jpg);
           background-size: cover; }
           main section .main_list > ul li > a {
             border-radius: 50px;
