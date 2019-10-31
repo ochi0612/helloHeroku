@@ -1,0 +1,44 @@
+@import "function.scss";
+
+/* header */
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  min-height: 50px;
+  z-index: 100;
+
+  .header_logo {
+    width: auto;
+    float: left;
+    margin-left: -10px;
+
+    > img {
+      height: 50px;
+    }
+  }
+
+  .header_nav {
+    display: block;
+    font-size: 0;
+    float: right;
+
+    li {
+      display: inline-block;
+      height: 50px;
+      margin: 0 0 0 30px;
+      line-height: 50px;
+      text-align: center;
+
+      > a {
+        display: inline;
+        font-size: 15px;
+        color: #ffffff;
+        font-style: oblique;
+        font-family: Times New Roman,"ＭＳ Ｐゴシック";
+      }
+    }
+  }
+}
