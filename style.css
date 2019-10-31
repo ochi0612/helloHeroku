@@ -135,12 +135,14 @@ header {
   min-height: 50px;
   z-index: 100; }
   header .header_logo {
-    width: auto; }
+    width: auto;
+    float: left; }
     header .header_logo > img {
       height: 50px; }
   header .header_nav {
-    display: inline-block;
-    font-size: 0; }
+    display: block;
+    font-size: 0;
+    float: right; }
     header .header_nav li {
       display: inline-block;
       height: 50px;
