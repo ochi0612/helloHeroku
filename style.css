@@ -139,7 +139,8 @@ header {
   z-index: 100; }
   header .header_logo {
     width: auto;
-    float: left; }
+    float: left;
+    margin-left: -10px; }
     header .header_logo > img {
       height: 50px; }
   header .header_nav {
@@ -207,11 +208,14 @@ main {
         margin-bottom: 50px; }
       main section .main_list > ul {
         display: -webkit-box;
+        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-pack: center;
+        -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center; }
         main section .main_list > ul li {

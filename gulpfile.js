@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     return gulp.src('lib/sass/style.scss') // コンパイル後の読込先
     .pipe(sass())
     .pipe(autoprefixer({
-        browsers: ["last 2 versions"],
+        browsers: ['last 2 versions', 'iOS >= 8.1'],
         cascade: false
     }))  //autoprefixerの実行
     .pipe(gulp.dest('./')) // コンパイル結果のディレクトリ
