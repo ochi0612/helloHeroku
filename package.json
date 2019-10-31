@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ochi0612/helloHeroku#readme",
   "description": "",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1"
   }
 }
