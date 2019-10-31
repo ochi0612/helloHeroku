@@ -216,7 +216,7 @@ main {
             position: absolute;
             top: 0;
             right: 0;
-            widows: 100%;
+            width: 100%;
             color: #fff;
             line-height: 100px;
             background-color: rgba(0, 0, 0, 0.7); }
