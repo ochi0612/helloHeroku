@@ -119,18 +119,13 @@ iframe {
   width: 100%;
   height: 600px; }
 
-header::after {
-  background-image: url(./lib/imgs/top.jpg);
-  background-size: cover;
-  height: 100%; }
-
-header .header {
-  padding: 0 40px;
+/* header */
+header {
+  padding: 0 20px;
   position: fixed;
-  background-color: black;
-  opacity: .7;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   z-index: 100; }
   header .header_logo {
     width: auto; }
@@ -139,86 +134,101 @@ header .header {
   header .header_nav {
     display: inline-block;
     font-size: 0;
-    width: 500px; }
-    header .header_nav > li {
+    float: right; }
+    header .header_nav li {
       display: inline-block;
       height: 50px;
-      width: 100px;
+      margin: 0 0 0 30px;
       line-height: 50px;
       text-align: center; }
-      header .header_nav > li > a {
+      header .header_nav li > a {
         display: inline;
         font-size: 15px;
         color: #ffffff;
         font-style: oblique;
         font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
 
+/* main */
 main {
+  position: relative;
   text-align: center;
-  padding: 30px 0; }
+  padding: calc(100vh - 90px) 20px 50px; }
+  main main::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - (100vh - 90px));
+    background-color: rgba(73, 55, 29, 0.95);
+    z-index: -1; }
   main .myname {
-    font-family: -webkit-pictograph; }
-  main .introduction {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    background-color: darkgray;
-    padding: 40px; }
-    main .introduction_box {
-      margin: auto; }
-      main .introduction_box > h2 {
-        margin-bottom: 20px; }
-    main .introduction > img {
-      width: 40%; }
-  main .main_list {
-    margin-top: 20px; }
-    main .main_list > ul {
-      margin: 20px; }
-      main .main_list > ul > li > a {
-        display: inline; }
-
-.content {
-  padding-top: 140px; }
-  .content > h1 {
-    margin-bottom: 40px;
-    text-align: center; }
-  .content_text {
-    margin: 40px auto;
-    padding: 30px;
-    width: 55%;
-    background: gainsboro; }
-    .content_text > h2 {
-      margin: 30px 0 10px; }
-  .content_box {
-    width: 90%;
-    margin: 0 auto 30px;
-    padding: 20px;
-    border: 2px solid black; }
-
-footer .footer {
-  padding: 0 40px;
-  background-color: black;
-  width: 100%;
-  z-index: 90; }
-  footer .footer_logo {
-    width: auto; }
-    footer .footer_logo > img {
-      height: 50px; }
-  footer .footer_nav {
-    display: inline-block;
-    font-size: 0;
-    width: 500px; }
-    footer .footer_nav > li {
-      display: inline-block;
-      width: 100px;
-      line-height: 50px;
-      text-align: center; }
-      footer .footer_nav > li > a {
-        display: inline;
-        font-size: 15px;
-        color: #ffffff;
-        font-style: oblique;
-        font-family: Times New Roman,"ＭＳ Ｐゴシック"; }
-  footer .footer_copywriter {
+    margin: 30px auto 50px;
+    width: fit-content;
+    font-family: -webkit-pictograph;
     color: #ffffff;
-    text-align: right; }
+    line-height: 60px; }
+  main section {
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 50px; }
+    main section:last-child {
+      margin-bottom: 0; }
+    main section .aisatsu {
+      border-radius: 15px;
+      padding: 30px 20px 50px;
+      margin: 0;
+      background: linear-gradient(90deg, #4948a7 0%, rgba(60, 60, 60, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+      color: #efefef;
+      width: 100%; }
+      main section .aisatsu h2 {
+        margin-bottom: 50px; }
+    main section .main_list {
+      border-radius: 15px;
+      background: linear-gradient(90deg, white 0%, rgba(60, 60, 60, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+      padding: 30px 20px 0; }
+      main section .main_list h2 {
+        margin-bottom: 50px; }
+      main section .main_list > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; }
+        main section .main_list > ul li {
+          position: relative;
+          border-radius: 50px;
+          margin: 0 10px 50px;
+          width: 250px;
+          height: 100px;
+          background-color: rgba(2, 0, 100, 0.7);
+          background-image: url("https://ochi.herokuapp.com/lib/imgs/introduction.jpg");
+          background-size: cover; }
+        main section .main_list > ul > li::before {
+          content: '';
+          display: block;
+          width: 250px;
+          height: 100px;
+          border-radius: 50px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7); }
+        main section .main_list > ul > li > a {
+          position: absolute;
+          top: 0;
+          right: 0;
+          color: #fff;
+          line-height: 100px; }
+
+/* footer */
+footer {
+  padding: 0 20px 0;
+  background-color: black;
+  position: relative;
+  height: 50px;
+  width: 100%; }
+  footer .content_max_width {
+    padding-top: 30px; }
+  footer p {
+    float: right;
+    color: #ffffff; }
