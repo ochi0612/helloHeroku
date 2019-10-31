@@ -173,8 +173,7 @@ main {
     left: 0;
     width: 100%;
     height: calc(100% - (100vh - 90px));
-    background-color: rgba(73, 55, 29, 0.95);
-    z-index: -1; }
+    background-color: rgba(73, 55, 29, 0.95); }
   main .myname {
     margin: 30px auto 50px;
     width: -webkit-fit-content;
