@@ -229,7 +229,7 @@ footer {
   height: 50px;
   width: 100%; }
   footer .content_max_width {
-    padding-top: 30px; }
+    line-height: 50px; }
     footer .content_max_width p {
       float: right;
       color: #ffffff; }
