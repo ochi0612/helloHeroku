@@ -120,7 +120,7 @@ h2 {
   content: '';
   display: block;
   position: fixed;
-  background-image: url("./lib/imgs/top.jpg");
+  background-image: url(https://ochi.herokuapp.com/lib/imgs/top.jpg);
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -209,7 +209,7 @@ main {
           width: 250px;
           height: 100px;
           background-color: rgba(2, 0, 100, 0.7);
-          background-image: url("./lib/imgs/introduction.jpg");
+          background-image: url(https://ochi.herokuapp.com/lib/imgs/introduction.jpg);
           background-size: cover; }
           main section .main_list > ul li > a {
             border-radius: 50px;
