@@ -110,10 +110,12 @@ html, body {
   height: 100%; }
 
 h1 {
-  font-size: 40px; }
+  font-size: 40px;
+  word-break: break-word; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 30px;
+  word-break: break-word; }
 
 .content_max_width {
   max-width: 1200px;
@@ -178,10 +180,7 @@ main {
     position: inherit;
     z-index: 1; }
   main .myname {
-    margin: 30px auto 50px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin: 30px 0 50px;
     font-family: -webkit-pictograph;
     color: #ffffff;
     line-height: 60px; }
@@ -195,16 +194,16 @@ main {
       border-radius: 15px;
       padding: 30px 20px 50px;
       margin: 0;
-      background: -webkit-gradient(linear, left top, right top, from(#4948a7), color-stop(90%, rgba(60, 60, 60, 0.6)), to(rgba(255, 255, 255, 0)));
-      background: linear-gradient(90deg, #4948a7 0%, rgba(60, 60, 60, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-gradient(linear, left top, right top, from(#4948a7), to(rgba(60, 60, 60, 0.9)));
+      background: linear-gradient(90deg, #4948a7 0%, rgba(60, 60, 60, 0.9) 100%);
       color: #efefef;
       width: 100%; }
       main section .aisatsu h2 {
         margin-bottom: 50px; }
     main section .main_list {
       border-radius: 15px;
-      background: -webkit-gradient(linear, left top, right top, from(white), color-stop(90%, rgba(60, 60, 60, 0.6)), to(rgba(255, 255, 255, 0)));
-      background: linear-gradient(90deg, white 0%, rgba(60, 60, 60, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+      background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(60, 60, 60, 0.9)));
+      background: linear-gradient(90deg, white 0%, rgba(60, 60, 60, 0.9) 100%);
       padding: 30px 20px 0; }
       main section .main_list h2 {
         margin-bottom: 50px; }
