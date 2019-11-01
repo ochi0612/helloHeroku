@@ -180,6 +180,7 @@ main {
     position: inherit;
     z-index: 1; }
   main h1 {
+    text-align: center;
     margin: 30px 0 50px;
     font-family: -webkit-pictograph;
     color: #ffffff;
