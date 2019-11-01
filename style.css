@@ -114,7 +114,7 @@ h1 {
   word-break: break-word; }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   word-break: break-word; }
 
 .content_max_width {
@@ -181,10 +181,10 @@ main {
     z-index: 1; }
   main h1 {
     text-align: center;
-    margin:auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    width: 250px;
+    margin: 30px auto 50px;
+    /* margin-top: 30px;
+    margin-bottom: 50px; */
+    width: 280px;
     font-family: -webkit-pictograph;
     color: #ffffff;
     background-color: #ccc;
