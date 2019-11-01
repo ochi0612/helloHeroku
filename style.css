@@ -181,7 +181,7 @@ main {
     z-index: 1; }
   main h1 {
     margin: 30px auto 50px;
-    width: fit-content;
+    width: 200px;
     font-family: -webkit-pictograph;
     color: #ffffff;
     background-color: #ccc;
