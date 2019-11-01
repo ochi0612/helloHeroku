@@ -181,8 +181,8 @@ main {
     z-index: 1; }
   main h1 {
     text-align: center;
-    margin: 30px auto 50px;
-    width: 250px;
+    margin: 30px 0 50px;
+    width: 100%;
     font-family: -webkit-pictograph;
     color: #ffffff;
     background-color: #ccc;
