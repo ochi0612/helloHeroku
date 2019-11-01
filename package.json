@@ -1,7 +1,16 @@
 {
   "name": "helloHeroku",
   "version": "1.0.0",
+  "description": "",
   "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +24,5 @@
   "bugs": {
     "url": "https://github.com/ochi0612/helloHeroku/issues"
   },
-  "homepage": "https://github.com/ochi0612/helloHeroku#readme",
-  "description": "",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^7.0.1"
-  }
+  "homepage": "https://github.com/ochi0612/helloHeroku#readme"
 }
