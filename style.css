@@ -180,6 +180,7 @@ main {
     position: inherit;
     z-index: 1; }
   main h1 {
+    text-align: center;
     margin: 30px auto 50px;
     width: 200px;
     font-family: -webkit-pictograph;
