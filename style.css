@@ -110,11 +110,11 @@ html, body {
   height: 100%; }
 
 h1 {
-  font-size: 10px;
+  font-size: 40px;
   word-break: break-word; }
 
 h2 {
-  font-size: 25px;
+  font-size: 30px;
   word-break: break-word; }
 
 .content_max_width {
@@ -180,14 +180,9 @@ main {
     position: inherit;
     z-index: 1; }
   main h1 {
-    /* text-align: center; */
-    margin: 30px auto 50px;
-    /* margin-top: 30px;
-    margin-bottom: 50px; */
-    width: 280px;
+    margin: 30px 0 50px;
     font-family: -webkit-pictograph;
     color: #ffffff;
-    background-color: #ccc;
     line-height: 60px; }
   main section {
     width: 100%;
