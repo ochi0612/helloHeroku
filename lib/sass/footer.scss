@@ -1,0 +1,21 @@
+@import "function.scss";
+
+/* footer */
+
+footer {
+  padding: 0 20px 0;
+  z-index: 1;
+  background-color: black;
+  position: relative;
+  height: 50px;
+  width: 100%;
+
+  .content_max_width {
+    line-height: 50px;
+
+    p {
+      float: right;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/* main */
+main {
+  position: relative;
+  text-align: center;
+  padding: calc(100vh - 90px) 20px 50px;
+}
+
+main::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - (100vh - 90px));
+  background-color: rgba(73, 55, 29, 0.95);
+}
+
+main .content_max_width {
+  position: inherit;
+  z-index: 1;
+}
+
+main h1 {
+  margin: 30px 0 50px;
+  font-family: pictograph;
+  color: #ffffff;
+  line-height: 60px;
+  background-color: #fff;
+}
+
+main section {
+  width: 100%;
+  border-radius: 50px;
+  margin-bottom: 50px;
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+main section .aisatsu {
+  border-radius: 15px;
+  padding: 30px 20px 50px;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#4948a7), to(rgba(60, 60, 60, 0.9)));
+  background: linear-gradient(90deg, #4948a7 0%, rgba(60, 60, 60, 0.9) 100%);
+  color: #efefef;
+  width: 100%;
+}
+
+main section .aisatsu h2 {
+  margin-bottom: 50px;
+}
+
+main section .main_list {
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(60, 60, 60, 0.9)));
+  background: linear-gradient(90deg, white 0%, rgba(60, 60, 60, 0.9) 100%);
+  padding: 30px 20px 0;
+}
+
+main section .main_list h2 {
+  margin-bottom: 50px;
+}
+
+main section .main_list > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section .main_list > ul li {
+  position: relative;
+  border-radius: 50px;
+  margin: 0 10px 50px;
+  width: 250px;
+  height: 100px;
+  background-color: rgba(2, 0, 100, 0.7);
+  background-image: url(./lib/imgs/introduction.jpg);
+  background-size: cover;
+}
+
+main section .main_list > ul li > a {
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  color: #fff;
+  line-height: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*# sourceMappingURL=page.css.map */
