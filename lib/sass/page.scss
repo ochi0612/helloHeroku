@@ -5,6 +5,7 @@
 main {
   position: relative;
   text-align: center;
+  min-height: calc(100vh - 50px);
   padding: calc(100vh - 90px) 20px 50px;
 
   &::after {
@@ -52,7 +53,8 @@ main {
       }
     }
 
-    .main_list {
+    .main_list,
+    .main_content {
       border-radius: 15px;
       background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(60, 60, 60, .9) 100%);
       padding: 30px 20px 0;
@@ -60,6 +62,13 @@ main {
       h2 {
         margin-bottom: 50px;
       }
+    }
+
+    .main_content {
+      padding-bottom: 50px;
+    }
+
+    .main_list {
 
       > ul {
         display: flex;
@@ -91,8 +100,8 @@ main {
     }
   }
 
-  &#hobby{
-    padding: 50px 0 0;
+  &.no-top {
+    padding-top: 50px;
     margin: 0;
     height: calc(100vh - 50px);
     background-color: rgba(73, 55, 29, 0.98);
@@ -103,7 +112,13 @@ main {
 
     &>.content_max_width{
       position: relative;
+    }
+  }
 
+  &#hobby {
+    padding: 50px 20px 0;
+
+    &>.content_max_width {
       .sort_btn {
         cursor: pointer;
         position: fixed;
@@ -129,7 +144,6 @@ main {
           width: 100%;
         }
       }
-
 
       & .fixed_animate_img {
         position: unset;
