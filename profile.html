@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="top-wrapper">
+        <header>
+            <div class="content_max_width clearfix">
+                <a class="header_logo" href="https://ochi.herokuapp.com/index.html">
+                    <img src="./lib/imgs/logo.png" alt="ochi" />
+                </a>
+                <ul class="header_nav">
+                    <li>
+                        <a href="./hobby.html">photos</a>
+                    </li>
+                    <li>
+                        <a href="">bbb</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main id="profile" class="no-top">
+            <div class="content_max_width">
+                <section>
+                    <div class="thinking main_content clearfix">
+                        <img src="./lib/imgs/profile.jpg" alt="" srcset="">
+                        <p>
+                            こんな考えをもって仕事してます<br>
+                            こうこうこうですね。
+                            こうこうこうですね。
+                            こうこうこうですね。
+                            こうこうこうですね。
+                            こうこうこうですね。<br>
+                            こうこうこうですね。
+                            こうこうこうですね。
+                            こうこうこうですね。
+                            こうこうこうですね。
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <div class="career main_content">
+                        <h2>キャリア</h2>
+                        <ul>
+                            <li>xx</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="content_max_width clearfix">
+                <p>©ochi 2019/11/01</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<style>
+/* 
+main#profile > .content_max_width > section > .main_list {
+    background-color: rgba(225, 225, 225);
+    padding: 30px 20px 50px;
+} */
+
+main#profile > .content_max_width > section > .thinking > img {
+    display: block;
+    float: right;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 2vw;
+    background-image: url(./lib/imgs/profile.jpg);
+    background-size: cover;
+}
+
+main#profile > .content_max_width > section > .thinking > p {
+    text-align: left;
+}
+
+
+</style>
+</html>

@@ -286,11 +286,12 @@ header .header_nav li>a {
 main {
   position: relative;
   text-align: center;
+  min-height: calc(100vh - 50px);
   padding: calc(100vh - 90px) 20px 50px;
 }
 
 main::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 0;
@@ -335,13 +336,19 @@ main section .aisatsu h2 {
   margin-bottom: 50px;
 }
 
-main section .main_list {
+main section .main_list,
+main section .main_content {
   border-radius: 15px;
   background: linear-gradient(90deg, white 0%, rgba(60, 60, 60, 0.9) 100%);
   padding: 30px 20px 0;
 }
 
-main section .main_list h2 {
+main section .main_content {
+  padding-bottom: 50px;
+}
+
+main section .main_list h2,
+main section .main_content h2 {
   margin-bottom: 50px;
 }
 
@@ -373,19 +380,22 @@ main section .main_list>ul li>a {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-main#hobby {
-  padding: 50px 0 0;
+main.no-top {
+  padding-top: 100px;
   margin: 0;
-  height: calc(100vh - 50px);
   background-color: rgba(73, 55, 29, 0.98);
 }
 
-main#hobby::after {
+main.no-top::after {
   content: none;
 }
 
-main#hobby>.content_max_width {
+main.no-top>.content_max_width {
   position: relative;
+}
+
+main#hobby {
+  padding: 50px 20px 0;
 }
 
 main#hobby>.content_max_width .sort_btn {
