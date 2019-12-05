@@ -47,9 +47,26 @@
                 </section>
                 <section>
                     <div class="career main_content">
-                        <h2>キャリア</h2>
+                        <h2>経歴</h2>
+                        <!-- <table class="career_list">
+                            <tr>
+                                <td class="data">2015/04/01 - 2018/06/30</td>
+                                <td class="company">東京地下鉄　株式会社</td>
+                            </tr>
+                            <tr>
+                                <td class="data">2018/06/18 - 現在</td>
+                                <td class="company">株式会社　Gizumo</td>
+                            </tr>
+                        </table> -->
                         <ul>
-                            <li>xx</li>
+                            <li class="career_list">
+                                <p class="data">2015/04/01 - 2018/06/30</p>
+                                <p class="company">東京地下鉄　株式会社</p>
+                            </li>
+                            <li class="career_list">
+                                <p class="data">2018/06/18 - 現在</p>
+                                <p class="company">株式会社　Gizumo</p>
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -64,24 +81,32 @@
 </body>
 
 <style>
-/* 
-main#profile > .content_max_width > section > .main_list {
-    background-color: rgba(225, 225, 225);
-    padding: 30px 20px 50px;
-} */
 
 main#profile > .content_max_width > section > .thinking > img {
     display: block;
-    float: right;
+    float: left;
     width: 100%;
     max-width: 300px;
-    margin-left: 2vw;
+    margin-right: 20px;
     background-image: url(./lib/imgs/profile.jpg);
     background-size: cover;
 }
 
 main#profile > .content_max_width > section > .thinking > p {
+    color: rgb(0, 0, 0);
     text-align: left;
+}
+
+main#profile > .content_max_width > section > .career > ul .career_list {
+    margin: 0 0 40px;
+}
+
+main#profile > .content_max_width > section > .career > ul .career_list:last-child {
+    margin: 0;
+}
+
+main#profile > .content_max_width > section > .career > ul .career_list p {
+    color: rgb(0, 0, 0);
 }
 
 
