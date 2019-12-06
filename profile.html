@@ -46,28 +46,33 @@
                     </div>
                 </section>
                 <section>
-                    <div class="career main_content">
-                        <h2>経歴</h2>
-                        <!-- <table class="career_list">
-                            <tr>
-                                <td class="data">2015/04/01 - 2018/06/30</td>
-                                <td class="company">東京地下鉄　株式会社</td>
-                            </tr>
-                            <tr>
-                                <td class="data">2018/06/18 - 現在</td>
-                                <td class="company">株式会社　Gizumo</td>
-                            </tr>
-                        </table> -->
-                        <ul>
-                            <li class="career_list">
-                                <p class="data">2015/04/01 - 2018/06/30</p>
-                                <p class="company">東京地下鉄　株式会社</p>
-                            </li>
-                            <li class="career_list">
-                                <p class="data">2018/06/18 - 現在</p>
-                                <p class="company">株式会社　Gizumo</p>
-                            </li>
-                        </ul>
+                    <div class="main_content">
+                        <div class="career">
+                            <h2>about</h2>
+                            <ul>
+                                <li class="career_list">
+                                    <p class="data">2015/04/01 - 2018/06/30</p>
+                                    <p class="company">東京地下鉄　株式会社</p>
+                                </li>
+                                <li class="career_list">
+                                    <p class="data">2018/06/18 - 現在</p>
+                                    <p class="company">株式会社　Gizumo</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="career">
+                            <h2>skill</h2>
+                            <ul>
+                                <li class="career_list">
+                                    <p class="data">2015/04/01 - 2018/06/30</p>
+                                    <p class="company">東京地下鉄　株式会社</p>
+                                </li>
+                                <li class="career_list">
+                                    <p class="data">2018/06/18 - 現在</p>
+                                    <p class="company">株式会社　Gizumo</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -87,7 +92,7 @@ main#profile > .content_max_width > section > .thinking > img {
     float: left;
     width: 100%;
     max-width: 300px;
-    margin-right: 20px;
+    margin: 0 20px 30px 0;
     background-image: url(./lib/imgs/profile.jpg);
     background-size: cover;
 }
@@ -97,15 +102,15 @@ main#profile > .content_max_width > section > .thinking > p {
     text-align: left;
 }
 
-main#profile > .content_max_width > section > .career > ul .career_list {
+main#profile > .content_max_width > section > .main_content > .career > ul .career_list {
     margin: 0 0 40px;
 }
 
-main#profile > .content_max_width > section > .career > ul .career_list:last-child {
+main#profile > .content_max_width > section > .main_content > .career > ul .career_list:last-child {
     margin: 0;
 }
 
-main#profile > .content_max_width > section > .career > ul .career_list p {
+main#profile > .content_max_width > section > .main_content > .career > ul .career_list p {
     color: rgb(0, 0, 0);
 }
 
