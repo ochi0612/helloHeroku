@@ -1,0 +1,18 @@
+#map {
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map2 .gmnoprint {
+    display: none;
+}
+
+#map2 .gm-bundled-control-on-bottom .gmnoprint {
+    display: block;
+}
