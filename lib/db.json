@@ -62,15 +62,39 @@
         },
         "profile": {},
         "portfolio": {
-            "portfolio-urls": [
-                "./portfolio/map-api-1/index.html",
-                "./portfolio/map-api-2/index.html",
-                "./portfolio/map-api-2/index.html",
-                "./portfolio/tag-replace/index.html",
-                "./portfolio/preg-php/index.php",
-                "./portfolio/text-preg-tool/index.html",
-                "./portfolio/slide/index.html",
-                "./portfolio/page-speed/index.html"
+            "portfolio-info": [
+                {
+                    "name": "位置情報配列取得",
+                    "url": "./portfolio/map-api-1/index.html"
+                },
+                {
+                    "name": "現在地取得",
+                    "url": "./portfolio/map-api-2/index.html"
+                },
+                {
+                    "name": "住所検索",
+                    "url": "./portfolio/map-api-3/index.html"
+                },
+                {
+                    "name": "タグ変換",
+                    "url": "./portfolio/tag-replace/index.html"
+                },
+                {
+                    "name": "php正規表現",
+                    "url": "./portfolio/preg-php/index.php"
+                },
+                {
+                    "name": "テキスト分岐",
+                    "url": "./portfolio/text-preg-tool/index.html"
+                },
+                {
+                    "name": "スライドショー",
+                    "url": "./portfolio/slide/index.html"
+                },
+                {
+                    "name": "ページスピード",
+                    "url": "./portfolio/page-speed/index.html"
+                }
             ],
             "api-data": {
                 "map-api": {}
