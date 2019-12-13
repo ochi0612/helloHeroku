@@ -63,10 +63,12 @@
         "profile": {},
         "portfolio": {
             "portfolio-urls": [
-                "./portfolio/map-api/index.html",
-                "./portfolio/tag_replace/index.html",
-                "./portfolio/preg_php/index.php",
-                "./portfolio/text_preg_tool/index.html",
+                "./portfolio/map-api-1/index.html",
+                "./portfolio/map-api-2/index.html",
+                "./portfolio/map-api-2/index.html",
+                "./portfolio/tag-replace/index.html",
+                "./portfolio/preg-php/index.php",
+                "./portfolio/text-preg-tool/index.html",
                 "./portfolio/slide/index.html",
                 "./portfolio/page-speed/index.html"
             ],
