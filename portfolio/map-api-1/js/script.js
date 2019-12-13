@@ -2,47 +2,57 @@
 var map;
 var marker = [];
 var LatLng = [];
-var mapLatLng = [{
-        name: "aaa",
-        let: 10,
-        lng: 100
+var mapLatLng = [
+    {
+        name: "東京駅",
+        latLng: {
+            lat: 35.68123620000001,
+            lng: 139.76712480000003
+        }
     },
     {
-        name: "bbb",
-        let: 10.2,
-        lng: 100.1
+        name: "池袋駅",
+        latLng: {
+            lat: 35.7295028,
+            lng: 139.7109001
+        }
     },
     {
-        name: "ccc",
-        let: 10.8,
-        lng: 100.2
+        name: "新宿駅",
+        latLng: {
+            lat: 35.6896067,
+            lng: 139.70057129999998
+        }
     },
     {
-        name: "ddd",
-        let: 10.2,
-        lng: 100.3
+        name: "渋谷駅",
+        latLng: {
+            lat: 35.6580339,
+            lng: 139.70163579999996
+        }
     },
     {
-        name: "eee",
-        let: 10.6,
-        lng: 100.4
+        name: "上野駅",
+        latLng: {
+            lat: 35.7141672,
+            lng: 139.7774091
+        }
     },
-    {
-        name: "fff",
-        let: 10.0,
-        lng: 100.5
-    }
 ];
 
-var mapStyles = [{
+var mapStyles = [
+    {
         "featureType": "landscape",
-        "stylers": [{
-            "color": "#f0f0f0"
-        }]
+        "stylers": [
+            {
+                "color": "#f0f0f0"
+            }
+        ]
     },
     {
         "featureType": "poi",
-        "stylers": [{
+        "stylers": [
+            {
                 "color": "#f0f0f0"
             },
             {
@@ -52,51 +62,20 @@ var mapStyles = [{
     },
     {
         "featureType": "road",
-        "stylers": [{
-            "visibility": "off"
-        }]
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
     }
 ];
 
-// 現在地取得
-function getMyPlace() {
-    var output = document.getElementById("result");
-    if (!navigator.geolocation) { //Geolocation apiがサポートされていない場合
-        output.innerHTML = "<p>Geolocationはあなたのブラウザーでサポートされておりません</p>";
-        return;
-    }
-
-    function success(position) {
-        var latitude = position.coords.latitude; //緯度
-        var longitude = position.coords.longitude; //経度
-        output.innerHTML = '<p>緯度 ' + latitude + '° <br>経度 ' + longitude + '°</p>';
-        // 位置情報
-        var latlng = new google.maps.LatLng(latitude, longitude);
-        // Google Mapsに書き出し
-        var map = new google.maps.Map(document.getElementById('map2'), {
-            zoom: 15, // ズーム値
-            center: latlng, // 中心座標
-            stylers: mapStyles
-        });
-        // マーカーの新規出力
-        new google.maps.Marker({
-            map: map,
-            position: latlng,
-        });
-    };
-
-    function error() {
-        //エラーの場合
-        output.innerHTML = "座標位置を取得できません";
-    };
-    navigator.geolocation.getCurrentPosition(success, error); //成功と失敗を判断
-}
-
 // map出力
 function setMap() {
+    // 初期値
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 1,
-        center: new google.maps.LatLng(mapLatLng[0].let, mapLatLng[0].lng),
+        center: {lat: 0,lng: 0},
         styles: mapStyles
     });
 }
@@ -104,7 +83,7 @@ function setMap() {
 // マーカーの新規出力(複数)
 function setMarker() {
     for (let i = 0; i < mapLatLng.length; i++) {
-        LatLng[i] = new google.maps.LatLng(mapLatLng[i].let, mapLatLng[i].lng);
+        LatLng[i] = mapLatLng[i].latLng;
         marker[i] = new google.maps.Marker({
             map: map,
             position: LatLng[i],
@@ -113,8 +92,7 @@ function setMarker() {
                 path: 'M -1,-1 1,1 M 1,-1 -1,1', //円を指定
                 scale: 5, //円のサイズ
                 strokeColor: "#ff5353", //枠の色
-                strokeWeight: .5, //枠の透過率
-                strokeWeight: 4.0
+                strokeWeight: 4.0 //枠の太さ
             }
         });
         attachMessage(marker[i], mapLatLng[i].name);
