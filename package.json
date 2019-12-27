@@ -6,11 +6,6 @@
   "directories": {
     "lib": "lib"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^7.0.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/ochi0612/helloHeroku/issues"
   },
-  "homepage": "https://github.com/ochi0612/helloHeroku#readme"
+  "homepage": "https://github.com/ochi0612/helloHeroku#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
 }

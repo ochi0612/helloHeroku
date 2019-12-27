@@ -4,7 +4,7 @@ var address = [];
 var searchArea = ["東京駅","池袋駅", "新宿駅", "渋谷駅"];
 
 // map出力
-function setMap() {
+function startMap() {
     // 初期値
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 1,
@@ -82,6 +82,7 @@ function attachMessage(marker, msg) {
 
 function getAddressInfo() {
 
+    var count = 0;
     for (let i = 0; i < searchArea.length; i++) {
         var geocoder = new google.maps.Geocoder();
 
@@ -91,18 +92,15 @@ function getAddressInfo() {
         }, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
 
-                for (var a in results) {
-                    if (results[a].geometry) {
+                // 住所取得
+                address[i] = results[0].formatted_address.replace(/^日本\、/, '');
+                // 緯度経度を取得
+                latlngObj[i] = results[0].geometry.location;
 
-                        // 住所取得
-                        address[i] = results[a].formatted_address.replace(/^日本\、/, '');
-
-                        // 緯度経度を取得
-                        latlngObj[i] = results[a].geometry.location;
-                        setMarker(address);
-                        zoomAdjustment();
-                        setLines(latlngObj);
-                    }
+                if (++count === searchArea.length) {
+                    setMarker(address);
+                    zoomAdjustment();
+                    setLines(latlngObj);
                 }
             } else {
                 alert("えぇ～っと・・、バージョンアップ？");
@@ -113,9 +111,8 @@ function getAddressInfo() {
 
 // 作成用関数
 function initMap() {
-    setMap();
+    startMap();
     getAddressInfo();
-    // zoomAdjustment();
-    // setLines(LatLng);
+    getAddressInfo();
 }
 
