@@ -39,18 +39,17 @@ $user_id = $connect->get(
     )
 );
 
-// $file = 'people.txt';
-// $old_ids_data = file_get_contents($file);
-// $new_ids_data = implode(',', $user_id->ids);
-// echo $old_ids_data;
-// if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
-//     exit;
-// }
+$file = 'people.txt';
+$old_ids_data = file_get_contents($file);
+$new_ids_data = implode(',', $user_id->ids);
 
+if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
+    exit;
+}
 
-// if ($old_ids_data === $new_ids_data) {
-//     exit;
-// }
+if ($old_ids_data === $new_ids_data) {
+    exit;
+}
 
 // リツイートしたユーザーがフォローしているのかの確認
 // $followers_id = $connect->get(
@@ -63,7 +62,7 @@ $user_id = $connect->get(
 // print_r($followers_id);
 // echo '</pre>';
 
-// file_put_contents($file, $new_ids_data);
+file_put_contents($file, $new_ids_data);
 
 // exit;
 
@@ -75,8 +74,6 @@ $user_info = $connect->get(
     )
 );
 
-var_dump($user_info->screen_name);
-
 // テキスト作成
 if ($user_info->screen_name === '') {
     $text = '鍵垢やんけ';
@@ -86,5 +83,11 @@ if ($user_info->screen_name === '') {
 
 // ツイートAPI
 $statuses = $connect->post("statuses/update", array("status" => $text));
+
+echo '<pre>';
+print_r($user_id->ids[0]);
+print_r($user_info->screen_name);
+print_r($text);
+echo '</pre>';
 
 exit;
