@@ -39,18 +39,18 @@ $user_id = $connect->get(
     )
 );
 
-$file = 'people.txt';
+// $file = 'people.txt';
 $old_ids_data = file_get_contents($file);
-$new_ids_data = implode(',', $user_id->ids);
+// $new_ids_data = implode(',', $user_id->ids);
+echo $old_ids_data;
+// if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
+//     exit;
+// }
 
-if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
-    exit;
-}
 
-
-if ($old_ids_data === $new_ids_data) {
-    exit;
-}
+// if ($old_ids_data === $new_ids_data) {
+//     exit;
+// }
 
 // リツイートしたユーザーがフォローしているのかの確認
 // $followers_id = $connect->get(
@@ -63,7 +63,7 @@ if ($old_ids_data === $new_ids_data) {
 // print_r($followers_id);
 // echo '</pre>';
 
-file_put_contents($file, $new_ids_data);
+// file_put_contents($file, $new_ids_data);
 
 // exit;
 
@@ -85,6 +85,6 @@ if ($user_info->screen_name === '') {
 }
 
 // ツイートAPI
-$statuses = $connect->post("statuses/update", array("status" => $text.mt_rand()));
+$statuses = $connect->post("statuses/update", array("status" => $text));
 
 exit;
