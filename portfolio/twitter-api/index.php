@@ -40,9 +40,9 @@ $user_id = $connect->get(
 );
 
 // $file = 'people.txt';
-$old_ids_data = file_get_contents($file);
+// $old_ids_data = file_get_contents($file);
 // $new_ids_data = implode(',', $user_id->ids);
-echo $old_ids_data;
+// echo $old_ids_data;
 // if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
 //     exit;
 // }
