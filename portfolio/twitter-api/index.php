@@ -90,6 +90,4 @@ echo '</pre>';
 
 sleep(30);
 
-file_put_contents($file, '');
-
 exit;
