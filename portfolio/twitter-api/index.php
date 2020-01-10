@@ -88,6 +88,4 @@ print_r($user_info->screen_name."\n");
 print_r($text."\n");
 echo '</pre>';
 
-sleep(30);
-
 exit;
