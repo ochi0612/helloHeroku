@@ -15,6 +15,7 @@
 //   "created_timestamp": "2020-01-10 09:04:27 +0000"
 // }
 
+echo 'test now';
 
 // TwitterOAuthを利用するためautoload.phpを読み込み
 require_once('twitteroauth/autoload.php');
