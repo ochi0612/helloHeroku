@@ -15,8 +15,6 @@
 //   "created_timestamp": "2020-01-10 09:04:27 +0000"
 // }
 
-echo 'test now';
-
 // TwitterOAuthを利用するためautoload.phpを読み込み
 require_once('twitteroauth/autoload.php');
 // TwitterOAuthクラスをインポート
@@ -85,9 +83,9 @@ if ($user_info->screen_name === '') {
 $statuses = $connect->post("statuses/update", array("status" => $text));
 
 echo '<pre>';
-print_r($user_id->ids[0]);
-print_r($user_info->screen_name);
-print_r($text);
+print_r($user_id->ids[0]."\n");
+print_r($user_info->screen_name."\n");
+print_r($text."\n");
 echo '</pre>';
 
 exit;
