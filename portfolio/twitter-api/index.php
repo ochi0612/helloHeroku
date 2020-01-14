@@ -24,7 +24,7 @@ $contents = json_decode($json, true);
 // デバッグ用にダンプ
 // var_dump($contents['test']);
 
-// if(isset($contents['tweet_create_events'])) {
+if(isset($contents['tweet_create_events'])) {
     $file = 'people.txt';
     $old_ids_data = file_get_contents($file);
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
@@ -42,17 +42,17 @@ $contents = json_decode($json, true);
 
     $connect = new TwitterOAuth( $CK, $CS, $AT, $AS );
 
-    // // ツイートAPI
+    // ツイートAPI
     // $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
-    // $statuses = $connect->post(
-    //     "statuses/update",
-    //     array(
-    //         "status" => $text
-    //     )
-    // );
+    $statuses = $connect->post(
+        "statuses/update",
+        array(
+            "status" => "あああああ"
+        )
+    );
 
     // echo 'test';
-// }
+}
 
 
 
