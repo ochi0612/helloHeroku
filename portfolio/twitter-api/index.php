@@ -39,14 +39,14 @@ if(isset($contents['tweet_create_events'])) {
     $old_ids_data = file_get_contents($file);
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
 
-    // ツイートAPI
-    $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
-    $statuses = $connect->post(
-        "statuses/update",
-        array(
-            "status" => $text
-        )
-    );
+    // // ツイートAPI
+    // $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
+    // $statuses = $connect->post(
+    //     "statuses/update",
+    //     array(
+    //         "status" => $text
+    //     )
+    // );
 
 }
 echo 'test';
