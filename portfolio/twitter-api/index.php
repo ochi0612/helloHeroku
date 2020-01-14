@@ -1,4 +1,19 @@
 <?php
+// CRC試験用
+if(isset($_REQUEST['crc_token'])) {
+  $signature = hash_hmac('sha256', $_REQUEST['crc_token'], 'lyP5QcjEPEoopezvrAovGqo6HgHXFcsqlhF63Q9xxM1nsjiJHJ', true);
+  $response['response_token'] = 'sha256='.base64_encode($signature);
+  print json_encode($response);
+  exit;
+}
+
+// // {
+// //   "id": "1216937494383456256",
+// //   "url": "https://5fdfec8a.ngrok.io/private/portfolio/twitter-api/",
+// //   "valid": true,
+// //   "created_timestamp": "2020-01-14 04:18:03 +0000"
+// // }
+
 
 $json = file_get_contents("php://input");
 
@@ -43,20 +58,8 @@ if(isset($contents['tweet_create_events'])) {
 
 
 
-// // CRC試験用
-// if(isset($_REQUEST['crc_token'])) {
-//   $signature = hash_hmac('sha256', $_REQUEST['crc_token'], 'lyP5QcjEPEoopezvrAovGqo6HgHXFcsqlhF63Q9xxM1nsjiJHJ', true);
-//   $response['response_token'] = 'sha256='.base64_encode($signature);
-//   print json_encode($response);
-//   exit;
-// }
 
-// // {
-// //   "id": "1216937494383456256",
-// //   "url": "https://5fdfec8a.ngrok.io/private/portfolio/twitter-api/",
-// //   "valid": true,
-// //   "created_timestamp": "2020-01-14 04:18:03 +0000"
-// // }
+
 
 // // TwitterOAuthを利用するためautoload.phpを読み込み
 // require_once('twitteroauth/autoload.php');
