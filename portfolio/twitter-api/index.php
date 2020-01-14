@@ -47,7 +47,11 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
         )
     );
 
+    echo '<pre>';
+    print_r($contents['for_user_id']);
+    print_r($ids->ids);
     print_r(array_search($contents['for_user_id'], $ids->ids));
+    echo '</pre>';
 
     if (array_search($contents['for_user_id'], $ids->ids) !== false) {
 
