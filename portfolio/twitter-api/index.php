@@ -34,7 +34,7 @@ $json = file_get_contents("php://input");
 //   ⇒ 第2引数をtrueにしないとハマるので注意
 $contents = json_decode($json, true);
 
-if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_events']['retweeted_status'])) {
+if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_events'][0]['retweeted_status'])) {
     $file = 'people.txt';
     $old_ids_data = file_get_contents($file);
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
