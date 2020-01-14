@@ -47,6 +47,12 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
         )
     );
 
+    echo '<pre>';
+    print_r($contents['tweet_create_events'][0]['user']['id']);
+    print_r($ids->ids);
+    echo '<\pre>';
+
+
     if (array_search($contents['tweet_create_events'][0]['user']['id'], $ids->ids)) {
 
         // ツイートAPI
