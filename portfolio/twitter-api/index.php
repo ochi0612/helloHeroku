@@ -27,14 +27,14 @@ if(isset($contents['tweet_create_events'])) {
 
     $connect = new TwitterOAuth( $CK, $CS, $AT, $AS );
 
-    // // ツイートAPI
-    // $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
-    // $statuses = $connect->post(
-    //     "statuses/update",
-    //     array(
-    //         "status" => $text
-    //     )
-    // );
+    // ツイートAPI
+    $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
+    $statuses = $connect->post(
+        "statuses/update",
+        array(
+            "status" => $text
+        )
+    );
 
     echo 'test';
 }
