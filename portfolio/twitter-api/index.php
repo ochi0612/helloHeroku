@@ -41,17 +41,11 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
 
     // ID取得API
     $ids = $connect->get(
-        "followers/ids",
+        "friends/ids",
         array(
             "user_id" => $contents['tweet_create_events'][0]['user']['id']
         )
     );
-
-    echo '<pre>';
-    print_r($contents['for_user_id']);
-    print_r($ids->ids);
-    print_r(array_search($contents['for_user_id'], $ids->ids));
-    echo '</pre>';
 
     if (array_search($contents['for_user_id'], $ids->ids) !== false) {
 
