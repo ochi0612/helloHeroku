@@ -47,7 +47,7 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
         )
     );
 
-    if (array_search($contents['for_user_id'], $ids->ids)) {
+    if (array_search($contents['for_user_id'], $ids->ids) !== false) {
 
         // ツイートAPI
         $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
