@@ -40,7 +40,7 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
 
     // ID取得API
-    $ids = $connect->post(
+    $ids = $connect->get(
         "followers/ids",
         array(
             "user_id" => $contents['tweet_create_events'][0]['user']['id']
