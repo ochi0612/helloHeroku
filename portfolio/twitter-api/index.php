@@ -41,13 +41,13 @@ $file = 'people.txt';
 $old_ids_data = file_get_contents($file);
 $new_ids_data = implode(',', $user_id->ids);
 
-if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
-    exit;
-}
+// if (!isset($user_id->ids[0]) || preg_match('/'.$user_id->ids[0].'/', $old_ids_data, $content)) {
+//     exit;
+// }
 
-if ($old_ids_data === $new_ids_data) {
-    exit;
-}
+// if ($old_ids_data === $new_ids_data) {
+//     exit;
+// }
 
 // リツイートしたユーザーがフォローしているのかの確認
 // $followers_id = $connect->get(
