@@ -17,7 +17,7 @@ if(isset($contents['tweet_create_events'])) {
     // TwitterOAuthを利用するためautoload.phpを読み込み
     require_once('/twitteroauth/autoload.php');
     // TwitterOAuthクラスをインポート
-    // use Abraham\TwitterOAuth\TwitterOAuth;
+    use Abraham\TwitterOAuth\TwitterOAuth;
 
     // Twitter APIを利用するための認証情報。xxxxxxxxの箇所にそれぞれの情報をセット
     $CK = 'jqiCT1aoHkS1kIBhJDGj9zB2A'; // Consumer Keyをセット
@@ -36,6 +36,7 @@ if(isset($contents['tweet_create_events'])) {
         )
     );
 
+    echo 'test';
 }
 
 
