@@ -14,13 +14,6 @@
 //   "created_timestamp": "2020-01-14 05:28:52 +0000"
 // }
 
-
-$json = file_get_contents("php://input");
-
-// JSON文字列をobjectに変換
-//   ⇒ 第2引数をtrueにしないとハマるので注意
-$contents = json_decode($json, true);
-
 // TwitterOAuthを利用するためautoload.phpを読み込み
 require_once('twitteroauth/autoload.php');
 // TwitterOAuthクラスをインポート
@@ -34,20 +27,37 @@ $AS = 'EAxDHKOwbEzCSC6duxgvXkCECiY2FoxszWMpTK3Cq3qiy'; // Access Token Secretを
 
 $connect = new TwitterOAuth( $CK, $CS, $AT, $AS );
 
-if(isset($contents['tweet_create_events'])) {
+
+$json = file_get_contents("php://input");
+
+// JSON文字列をobjectに変換
+//   ⇒ 第2引数をtrueにしないとハマるので注意
+$contents = json_decode($json, true);
+
+if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_events']['retweeted_status'])) {
     $file = 'people.txt';
     $old_ids_data = file_get_contents($file);
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
 
-    // // ツイートAPI
-    // $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
-    // $statuses = $connect->post(
-    //     "statuses/update",
-    //     array(
-    //         "status" => $text
-    //     )
-    // );
+    // ID取得API
+    $ids = $connect->post(
+        "followers/ids",
+        array(
+            "user_id" => $contents['tweet_create_events'][0]['user']['id']
+        )
+    );
 
+    if (array_search($contents['tweet_create_events'][0]['user']['id'], $ids->ids)) {
+
+        // ツイートAPI
+        $text = '@'.$contents['tweet_create_events'][0]['user']['screen_name'].' ありがとう'.mt_rand();
+        $statuses = $connect->post(
+            "statuses/update",
+            array(
+                "status" => $text
+            )
+        );
+    }
 }
-echo 'test';
+// echo $text;
 
