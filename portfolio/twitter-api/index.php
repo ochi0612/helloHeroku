@@ -31,4 +31,6 @@ function Twitter_OAuth() {
     return new TwitterOAuth( $CK, $CS, $AT, $AS );
 }
 
+// Account Activity API
+require_once('auto-tweet.php');
 
