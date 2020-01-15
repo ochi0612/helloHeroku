@@ -34,7 +34,7 @@ $json = file_get_contents("php://input");
 //   ⇒ 第2引数をtrueにしないとハマるので注意
 $contents = json_decode($json, true);
 
-if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_events'][0]['retweeted_status'])) {
+if(isset($contents['tweet_create_events']) && $contents['tweet_create_events'][0]['retweeted_status']['id_str'] === '1215208380056256512') {
     $file = 'people.txt';
     $old_ids_data = file_get_contents($file);
     file_put_contents($file, $old_ids_data."\n".json_encode($contents));
@@ -47,12 +47,6 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
         )
     );
 
-    echo '<pre>';
-    print_r($contents['for_user_id']);
-    print_r($ids->ids);
-    print_r(array_search($contents['for_user_id'], $ids->ids));
-    echo '</pre>';
-
     if (array_search($contents['for_user_id'], $ids->ids) !== false) {
 
         // ツイートAPI
@@ -63,14 +57,12 @@ if(isset($contents['tweet_create_events']) && isset($contents['tweet_create_even
                 "status" => $text
             )
         );
-    }
-}
-// echo $text;
 
-// $statuses = $connect->post(
-//     "statuses/update",
-//     array(
-//         "account_id" => "1214022018179272706"
-//     )
-// );
-// 1214022018179272706
+        echo '成功';
+
+    }
+
+    exit;
+}
+
+echo '失敗';
