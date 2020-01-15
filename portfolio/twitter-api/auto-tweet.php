@@ -15,7 +15,7 @@ if(isset($_REQUEST['crc_token'])) {
 // }
 
 // TwitterOAuthを利用するためautoload.phpを読み込み
-require_once('../../lib/twitteroauth/autoload.php');
+require_once('twitteroauth/autoload.php');
 // TwitterOAuthクラスをインポート
 use Abraham\TwitterOAuth\TwitterOAuth;
 
