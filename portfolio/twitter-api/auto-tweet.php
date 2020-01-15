@@ -35,4 +35,3 @@ if(isset($contents['tweet_create_events']) && $contents['tweet_create_events'][0
 
     exit;
 }
-echo '失敗';
