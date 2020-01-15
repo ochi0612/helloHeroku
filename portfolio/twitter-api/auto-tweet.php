@@ -1,8 +1,5 @@
 <?php
 
-// Account Activity API
-require_once('index.php');
-
 $json = file_get_contents("php://input");
 
 // JSON文字列をobjectに変換
@@ -38,3 +35,4 @@ if(isset($contents['tweet_create_events']) && $contents['tweet_create_events'][0
 
     exit;
 }
+echo '失敗';
